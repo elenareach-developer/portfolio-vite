@@ -2,7 +2,23 @@ import React from 'react'
 import avatar from '../assets/avatar.png'
 import wave from '../assets/wave.png'
 
-const Home = () => {
+
+const Home = () =>{
+  return (
+    <>
+      <div className="lg:pl-2 flex flex-col">
+        <div>
+            <img className="w-18 h-18 shadow-lg rounded-full" src={avatar} alt="avatar" />
+            <div className="mt-8 text-2xl font-bold flex">
+              <img className="w-8 h-8 mr-2 wav " src={wave} alt="wave" />
+            </div>
+        </div>
+      </div>
+    </>
+  )
+}
+
+const Home1 = () => {
   return (
     <div className="lg:pl-2 flex flex-col">
       <div>
