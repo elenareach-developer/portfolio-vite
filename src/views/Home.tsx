@@ -6,6 +6,10 @@ import wave from '../assets/wave.png'
 const Home = () =>{
   return (
     <>
+    <div className="bg-indigo-500 border-zinc-950">Hello</div>
+        <button className="bg-indigo-500 border-zinc-950">
+      Save changes
+    </button>
      <figure className="md: flex bg-slate-100 rounded-xl p-8 md:p-0 dark:bg-slate-800">
             <img className="w-24 h-24 md:w-48 md:h-auto md:founded-none rounded-full mx-auto" src={avatar} alt="" width="384" height="384"/>
             <div className="pt-6 md: p-8 text-center md:text-left space-y-4">
