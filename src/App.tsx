@@ -71,7 +71,7 @@ const App = () => {
             </div>
             <a
               className="bg-pink-100 text-pink-700 p-2 rounded bg-opacity-40 hover:bg-opacity-80 dark:bg-opacity-10 dark:hover:bg-opacity-20 hidden md:block"
-              href="mailto:spencer.wushangbo@gmail.com"
+              href="mailto:elenareach@gmail.com"
             >
               Get in touch
             </a>
