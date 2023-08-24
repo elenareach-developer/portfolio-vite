@@ -1,4 +1,4 @@
-import { AcademicCapIcon, ExternalLinkIcon, MenuIcon } from '@heroicons/react/outline'
+import { AcademicCapIcon, ExternalLinkIcon, MenuIcon, AdjustmentsIcon } from '@heroicons/react/outline'
 import React, { useEffect, useRef, useState } from 'react'
 import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom'
 import { CSSTransition } from 'react-transition-group'
@@ -7,6 +7,8 @@ import Home from './views/Home'
 import NotFound from './views/NotFound'
 import Projects from './views/Projects'
 import Social from './views/Social'
+import fetchedImgSrc from './assets/bg.png'
+import avatar from './assets/avatar.png'
 
 const App = () => {
   const currentYear: number = new Date().getFullYear()
@@ -37,19 +39,25 @@ const App = () => {
 
   return (
     <Router>
-      <div className="min-h-screen flex flex-col dark:bg-gray-900 dark:text-white">
-        <div className="container mx-auto px-6 flex-grow max-w-5xl">
-          <nav className="mt-4 flex flex-row justify-between">
+      <div className="min-h-screen flex flex-col dark:bg-gray-900 dark:text-white ">
+      <div className="h-14 bg-gradient-to-r from-purple-500 to-pink-500"></div>
+        <div className="container mx-auto px-6 flex-grow">
+          <nav className="mt-4 flex flex-row justify-between ">
             <Link
               className="flex lg:p-2 py-2 rounded items-center lg:hover:bg-gray-100 lg:dark:hover:bg-gray-800"
               to="/"
             >
-              <AcademicCapIcon className="mr-4 w-5 h-5" />
-              <span>Home</span>
+              
             </Link>
 
             {/* Navigation on desktop devices */}
-            <div className="hidden md:flex">
+            <div className="hidden md:block">
+            <Link
+                className="text-blue-700 dark:text-yellow-400 p-2 mr-2 rounded hover:bg-blue-50 dark:hover:bg-gray-800"
+                to="/"
+              >
+                Home
+              </Link>
               <Link
                 className="text-blue-700 dark:text-yellow-400 p-2 mr-2 rounded hover:bg-blue-50 dark:hover:bg-gray-800"
                 to="/projects"
@@ -68,13 +76,8 @@ const App = () => {
               >
                 GPG
               </Link>
+              <img className="w-24 h-24 md:w-48 md:h-auto md:founded-none rounded-full mx-auto" src={avatar} alt="" width="384" height="384"/>
             </div>
-            <a
-              className="bg-pink-100 text-pink-700 p-2 rounded bg-opacity-40 hover:bg-opacity-80 dark:bg-opacity-10 dark:hover:bg-opacity-20 hidden md:block"
-              href="mailto:elenareach@gmail.com"
-            >
-              Get in touch
-            </a>
 
             {/* Navigation on mobile devices (dropdown menu) */}
             <button
@@ -89,6 +92,9 @@ const App = () => {
             <CSSTransition in={showMenu} timeout={300} classNames="menu" unmountOnExit nodeRef={menuRef}>
               <div className="absolute top-0 right-0" ref={menuRef}>
                 <div className="flex flex-col space-y-4 m-3 p-4 rounded bg-white dark:bg-gray-800 shadow-xl">
+                <Link to="/" onClick={closeMenu}>
+                    Home
+                  </Link>
                   <Link to="/projects" onClick={closeMenu}>
                     Projects
                   </Link>
