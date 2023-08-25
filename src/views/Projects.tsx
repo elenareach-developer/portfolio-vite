@@ -1,15 +1,15 @@
 import { BeakerIcon } from '@heroicons/react/outline'
 import React from 'react'
-import ProjectCard from '../components/ProjectCard'
-import { projects } from '../config/projects'
+import Company from '../components/Company'
+import {  projectsLena } from '../config/projects'
 
-const projectCards = projects.map(p => (
-  <ProjectCard key={p.name} name={p.name} link={p.link} slug={p.slug} bimg={p.bimg} />
+const projectCards =  projectsLena.map(p => (
+  <Company   title={p.title} description={p.description} img={p.img} />
 ))
 
 const Projects = () => {
   return (
-    <div className="lg:pl-2">
+    <div className="bg-slate-400  min-h-screen lg:pl-2">
       <div className="text-2xl font-bold flex items-center">
         <BeakerIcon className="mr-4 w-6 h-6" />
         <div>Projects</div>
