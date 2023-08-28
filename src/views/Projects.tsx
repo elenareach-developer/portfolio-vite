@@ -4,7 +4,7 @@ import Company from '../components/Company'
 import {  projectsLena } from '../config/projects'
 
 const projectCards =  projectsLena.map(p => (
-  <Company   title={p.title} description={p.description} img={p.img} />
+  <Company   title={p.title} description={p.description} img={p.img} skills={p.skills} />
 ))
 
 const Projects = () => {

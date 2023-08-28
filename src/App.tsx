@@ -2,7 +2,7 @@ import { AcademicCapIcon, ExternalLinkIcon, MenuIcon, AdjustmentsIcon } from '@h
 import React, { useEffect, useRef, useState } from 'react'
 import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom'
 import { CSSTransition } from 'react-transition-group'
-import GPG from './views/GPG'
+import Features from './views/Features'
 import Home from './views/Home'
 import NotFound from './views/NotFound'
 import Projects from './views/Projects'
@@ -72,9 +72,9 @@ const App = () => {
               </Link>
               <Link
                 className="text-blue-700 dark:text-yellow-400 p-2 rounded hover:bg-blue-50 dark:hover:bg-gray-800"
-                to="/gpg"
+                to="/features"
               >
-                GPG
+                Features
               </Link>
               <img className="w-24 h-24 md:w-48 md:h-auto md:founded-none rounded-full mx-auto" src={avatar} alt="" width="384" height="384"/>
             </div>
@@ -101,8 +101,8 @@ const App = () => {
                   <Link to="/social" onClick={closeMenu}>
                     Social
                   </Link>
-                  <Link to="/gpg" onClick={closeMenu}>
-                    GPG
+                  <Link to="/features" onClick={closeMenu}>
+                    Features
                   </Link>
                   <a className="flex items-center" href="mailto:spencer.wushangbo@gmail.com" onClick={closeMenu}>
                     <span className="mr-2">Get in touch</span>
@@ -121,8 +121,8 @@ const App = () => {
               <Route path="/social">
                 <Social />
               </Route>
-              <Route path="/gpg">
-                <GPG />
+              <Route path="/features">
+                <Features />
               </Route>
               <Route exact path="/">
                 <Home />

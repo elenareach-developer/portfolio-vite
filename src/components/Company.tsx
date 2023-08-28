@@ -13,12 +13,7 @@ const Company = (props:CompanyProps ) =>{
       rel="noopener noreferrer"
       className="inline-block rounded shadow transition transform hover:shadow-md hover:-translate-y-1 relative overflow-hidden"
     >
-      <SwitchTransition>
-              <CSSTransition
-                timeout={200}
-                classNames="fade"
-                unmountOnExit
-              >
+    
                     <figure className="bg-slate-500 rounded-xl p-8 dark:bg-slate-800">
                       <img className=" mx-auto" src={props.img} alt="" width="150" height="150" />
                       <div className="pt-6 space-y-4">
@@ -26,6 +21,9 @@ const Company = (props:CompanyProps ) =>{
                           <p className="text-lg font-medi">
                           {props.description}
                           </p>
+                            <div className="grid grid-cols-5 gap-4  justify-items-center">
+                            {props?.skills?.map((el,index)=> <button key={`$el+$index`} className="rounded-none bg-green-300 p-1 ">{el}</button>)}
+                            </div>
                         </blockquote>
                         <figcaption>
                           <div>
@@ -34,8 +32,6 @@ const Company = (props:CompanyProps ) =>{
                         </figcaption>
                       </div>
                     </figure>
-              </CSSTransition>
-        </SwitchTransition>
         </a>
     </>
   )
