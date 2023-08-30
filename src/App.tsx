@@ -1,13 +1,12 @@
-import { AcademicCapIcon, ExternalLinkIcon, MenuIcon, AdjustmentsIcon } from '@heroicons/react/outline'
+import { ExternalLinkIcon, MenuIcon} from '@heroicons/react/outline'
 import React, { useEffect, useRef, useState } from 'react'
 import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom'
 import { CSSTransition } from 'react-transition-group'
-import Features from './views/Features'
+import Skills from './views/Skills'
 import Home from './views/Home'
 import NotFound from './views/NotFound'
 import Projects from './views/Projects'
-import Social from './views/Social'
-import fetchedImgSrc from './assets/bg.png'
+import Code from './components/Code'
 import avatar from './assets/avatar.png'
 
 const App = () => {
@@ -66,15 +65,15 @@ const App = () => {
               </Link>
               <Link
                 className="text-blue-700 dark:text-yellow-400 p-2 mr-2 rounded hover:bg-blue-50 dark:hover:bg-gray-800"
-                to="/social"
+                to="/code"
               >
-                Social
+                Code
               </Link>
               <Link
                 className="text-blue-700 dark:text-yellow-400 p-2 rounded hover:bg-blue-50 dark:hover:bg-gray-800"
-                to="/features"
+                to="/skills"
               >
-                Features
+                Skills
               </Link>
               <img className="w-24 h-24 md:w-48 md:h-auto md:founded-none rounded-full mx-auto" src={avatar} alt="" width="384" height="384"/>
             </div>
@@ -98,11 +97,11 @@ const App = () => {
                   <Link to="/projects" onClick={closeMenu}>
                     Projects
                   </Link>
-                  <Link to="/social" onClick={closeMenu}>
-                    Social
+                  <Link to="/code" onClick={closeMenu}>
+                    Code
                   </Link>
-                  <Link to="/features" onClick={closeMenu}>
-                    Features
+                  <Link to="/skills" onClick={closeMenu}>
+                    Skills
                   </Link>
                   <a className="flex items-center" href="mailto:spencer.wushangbo@gmail.com" onClick={closeMenu}>
                     <span className="mr-2">Get in touch</span>
@@ -113,16 +112,16 @@ const App = () => {
             </CSSTransition>
           </nav>
 
-          <div className="my-16">
+          <div >
             <Switch>
               <Route path="/projects">
                 <Projects />
               </Route>
-              <Route path="/social">
-                <Social />
+              <Route path="/code">
+                <Code />
               </Route>
-              <Route path="/features">
-                <Features />
+              <Route path="/skills">
+                <Skills />
               </Route>
               <Route exact path="/">
                 <Home />

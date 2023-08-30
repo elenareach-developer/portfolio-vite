@@ -4,6 +4,13 @@ import onedriveVercelIndex from '../assets/onedrive-vercel-index.png'
 import substats from '../assets/substats.png'
 import vscodeMathToImage from '../assets/vscode-math-to-image.png'
 
+
+export interface SkillsCardProps{
+  id: string,
+  title:string,
+  description: string
+}
+
 export interface ProjectProps {
   name: string
   link: string
@@ -60,9 +67,9 @@ const geeni = "Another of the 27Global huge project I worked on was the GEENI ap
 export const projectsLena  = [
   {img:"/src/assets/charter-logo.png", description: charter,skills:["AgularJS", "Pyhon", "MongoDB"], title:"Full Stack Engineer"},
   {img:"/src/assets/ahs-logo.svg", description: ahs, skills:["React.js","NodeJs","MongoDb"] ,title:"Software Engineer"},
-  {img:"/src/assets/codepath-logo.webp", description: codepath, skills:["Software Development", "Web Applications","Front-end Development"],title:"Full-Stack Software Engineer | Instructor"},
+  {img:"/src/assets/codepath-logo.webp", description: codepath, skills:["React", "NodeJS","Postgres"],title:"Full-Stack Software Engineer | Instructor"},
   {img:"/src/assets/dish-logo.png", description: dish,skills:["React.js","Python","MySQl"] ,title:"Software Engineer"},
-  {img:"/src/assets/27Global-logo.png", description:global ,skills:["React.js", " React Native"," AngularJS ","Angular Material", "NnodeJs"] ,title:"Software Engineer"},
+  {img:"/src/assets/27Global-logo.png", description:global ,skills:["React.js", " React Native"," AngularJS ","Angular Material", "NodeJs"] ,title:"Software Engineer"},
   {img:"/src/assets/geeni_logo_27Global.avif", description:geeni ,skills:[" React Native"," NodeJs "] ,title:"Software Engineer"},
-  {img:"/src/assets/apolloware_logo_27Global.png", description:apolloware,skills:[" Angular8 ","Angular Material", ""] ,title:"Software Engineer"}
+  {img:"/src/assets/apolloware_logo_27Global.png", description:apolloware,skills:[" Angular8 ","Angular Material", "D3.js"] ,title:"Software Engineer"}
 ]

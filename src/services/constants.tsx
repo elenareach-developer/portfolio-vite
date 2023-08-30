@@ -6,7 +6,11 @@ import {
   } from '@heroicons/react/solid'
   
 
-  
+const skills = [
+  {id: "el-1",   title:"React", description: "sdvdjsbob osdivbsoduvb osibdvou", section: "FrontEnd"},
+  {id: "el-3",   title:"Db", description: "sdvdjsbob osdivbsoduvb osibdvou", section: "DataBase"},
+
+]
 
 const products = [
     { name: 'Analytics', description: 'Get a better understanding of your traffic', href: '#', icon: ArrowUpIcon },

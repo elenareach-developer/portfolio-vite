@@ -21,7 +21,7 @@ const Company = (props:CompanyProps ) =>{
                           <p className="text-lg font-medi">
                           {props.description}
                           </p>
-                            <div className="grid grid-cols-5 gap-4  justify-items-center">
+                            <div className="grid grid-cols-3 gap-4  justify-items-center">
                             {props?.skills?.map((el,index)=> <button key={`$el+$index`} className="rounded-none bg-green-300 p-1 ">{el}</button>)}
                             </div>
                         </blockquote>
