@@ -26,7 +26,7 @@ const SocialCard = (props: SocialProps) => {
         setIsLoading(false)
       })
   }, [])
-[React,Redux, Tailwindcss, Python, Express.js, NodeJS, MongoDb ]
+
   return (
     <a href={props.link} target="_blank" rel="noopener noreferrer" className="rounded inline-block m-1">
       <div className="flex items-center space-x-2 rounded border-2 pl-2" style={{ borderColor: `${props.color}` }}>
