@@ -6,7 +6,6 @@ import Skills from './views/Skills'
 import Home from './views/Home'
 import NotFound from './views/NotFound'
 import Projects from './views/Projects'
-import Code from './components/Code'
 import avatar from './assets/avatar.png'
 
 const App = () => {
@@ -63,12 +62,7 @@ const App = () => {
               >
                 Projects
               </Link>
-              <Link
-                className="text-blue-700 dark:text-yellow-400 p-2 mr-2 rounded hover:bg-blue-50 dark:hover:bg-gray-800"
-                to="/code"
-              >
-                Code
-              </Link>
+          
               <Link
                 className="text-blue-700 dark:text-yellow-400 p-2 rounded hover:bg-blue-50 dark:hover:bg-gray-800"
                 to="/skills"
@@ -97,9 +91,6 @@ const App = () => {
                   <Link to="/projects" onClick={closeMenu}>
                     Projects
                   </Link>
-                  <Link to="/code" onClick={closeMenu}>
-                    Code
-                  </Link>
                   <Link to="/skills" onClick={closeMenu}>
                     Skills
                   </Link>
@@ -116,9 +107,6 @@ const App = () => {
             <Switch>
               <Route path="/projects">
                 <Projects />
-              </Route>
-              <Route path="/code">
-                <Code />
               </Route>
               <Route path="/skills">
                 <Skills />
