@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom'
 import { CSSTransition } from 'react-transition-group'
 import Skills from './views/Skills'
+import Wheel from './views/Wheel'
 import Home from './views/Home'
 import NotFound from './views/NotFound'
 import Projects from './views/Projects'
@@ -69,6 +70,12 @@ const App = () => {
               >
                 Skills
               </Link>
+              <Link
+                className="text-blue-700 dark:text-yellow-400 p-2 rounded hover:bg-blue-50 dark:hover:bg-gray-800"
+                to="/features"
+              >
+                Feature
+              </Link>
               <img className="w-24 h-24 md:w-48 md:h-auto md:founded-none rounded-full mx-auto" src={avatar} alt="" width="384" height="384"/>
             </div>
 
@@ -94,6 +101,9 @@ const App = () => {
                   <Link to="/skills" onClick={closeMenu}>
                     Skills
                   </Link>
+                  <Link to="/features" onClick={closeMenu}>
+                    Features
+                  </Link>
                   <a className="flex items-center" href="mailto:spencer.wushangbo@gmail.com" onClick={closeMenu}>
                     <span className="mr-2">Get in touch</span>
                     <ExternalLinkIcon className="w-5 h-5" />
@@ -113,6 +123,9 @@ const App = () => {
               </Route>
               <Route exact path="/">
                 <Home />
+              </Route>
+              <Route exact path="/features">
+                <Wheel />
               </Route>
               <Route path="*">
                 <NotFound />

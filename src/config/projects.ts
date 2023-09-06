@@ -4,6 +4,31 @@ import onedriveVercelIndex from '../assets/onedrive-vercel-index.png'
 import substats from '../assets/substats.png'
 import vscodeMathToImage from '../assets/vscode-math-to-image.png'
 
+export interface WheelProps{
+  segments:string[],
+  segColors:string[],
+  winningSegment:string,
+  onFinished:(arg:string)=>void,
+  primaryColor:string 
+  contrastColor:string 
+  buttonText:string
+  isOnlyOnce:boolean,
+  size:number
+  upDuration:number
+  downDuration:number
+  fontFamily?:string 
+}
+
+const defaultWeelProps = {
+  primaryColor: 'black',
+  contrastColor: 'white',
+  buttonText:'Spin',
+  isOnlyOnce: true,
+  size:290,
+  upDuration:100,
+  downDuration:1000,
+  fontFamily:'proxima-nova'
+}
 
 export interface SkillsCardProps{
   id: string,

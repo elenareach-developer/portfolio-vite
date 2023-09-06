@@ -19,6 +19,42 @@ export const skills = [
   
 ]
 
+export const segmentsWheel = [
+  '11111',
+  'won 70',
+  'won 10',
+  'better luck next time',
+  'better luck next time',
+  'won 70',
+  'won 10',
+  'better luck next time',
+  'better luck next time',
+  'won 70',
+  'won 10',
+  'better luck next time',
+  'better luck next time',
+  'won 70',
+  'won 10',
+  'better luck next time',
+  '55555',
+ 
+]
+export const segColorsWheel = [
+  '#EE4040',
+  '#F0CF50',
+  '#815CD1',
+  '#3DA5E0',
+  '#34A24F',
+  '#F9AA1F',
+  '#EC3F3F',
+  '#FF9000'
+]
+export const onFinishedWheel = (winner:string)=> {
+  console.log(winner)
+}
+
+
+
 const products = [
     { name: 'Analytics', description: 'Get a better understanding of your traffic', href: '#', icon: ArrowUpIcon },
     { name: 'Engagement', description: 'Speak directly to your customers', href: '#', icon:  ArrowUpIcon },
