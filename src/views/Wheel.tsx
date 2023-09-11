@@ -18,7 +18,7 @@ const Wheel = () =>{
       const handleSubmit = (evt:any) => {
              evt.preventDefault();
              //todo get data by enter
-             setSegments(commentText.split(' '))
+             setSegments(commentText.split("\n"))
          }
 
   useEffect(()=>{
@@ -50,7 +50,7 @@ const Wheel = () =>{
        <form  id="wheelForm" onSubmit={handleSubmit} >
       <div>
           <label
-              htmlFor="CommentsOrAdditionalInformation">Wheel of Fortune: insert fields via space</label>
+              htmlFor="CommentsOrAdditionalInformation">Wheel of Fortune: insert fields via Enter key</label>
                     <textarea 
                         name = "commentTextArea"
                         id="CommentsOrAdditionalInformation"
@@ -61,7 +61,7 @@ const Wheel = () =>{
                         className='resize rounded-md'
                           >
                   </textarea>
-                  <button className="rounded-full hover:rounded-lg bg-red-300" value="Submit">Enter</button>
+                  <button className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" value="Submit">Enter</button>
             </div>
     </form>
 
