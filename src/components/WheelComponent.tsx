@@ -1,6 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import { WheelProps } from '../config/projects'
 
+/* demetinons dependency: size,    const centerX = 195
+  const centerY = 195
+   canvas.setAttribute('width', '400')
+      canvas.setAttribute('height', '400')
+          ctx.clearRect(0, 0, 400, 400)
+             width='400'
+        height='400'
+  */
 const WheelComponent = ({
   segments,
   segColors,
@@ -10,7 +18,7 @@ const WheelComponent = ({
   contrastColor = 'white',
   buttonText = 'Spin',
   isOnlyOnce = true,
-  size = 290,
+  size,
   upDuration = 100,
   downDuration = 1000,
   fontFamily = 'proxima-nova'
@@ -29,8 +37,8 @@ const WheelComponent = ({
   const downTime = segments.length * downDuration
   let spinStart = 0
   let frames = 0
-  const centerX = 300
-  const centerY = 300
+  const centerX = size+5
+  const centerY = size+5
 
   useEffect(() => {
     const segLen:number = segments.length;
@@ -39,8 +47,6 @@ const WheelComponent = ({
     if(segLen>colorLen){
       let rem = segLen%colorLen;
       let whole = (segLen-rem)/colorLen
-      console.log("rem, whole")
-      console.log(rem, whole)
       if(whole>0){
         for(let i=0; i<whole; i++){
           segColor = [...segColor, ...segColors]
@@ -55,14 +61,14 @@ const WheelComponent = ({
       }
       segColors = segColor
     }
-  },[])
+  },[segments])
 
   useEffect(() => {
     wheelInit()
     setTimeout(() => {
       window.scrollTo(0, 1)
     }, 0)
-  }, [])
+  }, [segments])
   const wheelInit = () => {
     initCanvas()
     wheelDraw()
@@ -73,8 +79,8 @@ const WheelComponent = ({
     console.log(navigator)
     if (navigator.userAgent.indexOf('MSIE') !== -1) {
       canvas = document.createElement('canvas')
-      canvas.setAttribute('width', '1000')
-      canvas.setAttribute('height', '600')
+      canvas.setAttribute('width', (size+10)*2+"")
+      canvas.setAttribute('height', (size+10)*2+"")
       canvas.setAttribute('id', 'canvas')
       document?.getElementById('wheel')?.appendChild(canvas)
     }
@@ -229,14 +235,14 @@ const WheelComponent = ({
   }
   const clear = () => {
     const ctx = canvasContext
-    ctx.clearRect(0, 0, 1000, 800)
+    ctx.clearRect(0, 0, (size+10)*2, (size+10)*2)
   }
   return (
     <div id='wheel'>
       <canvas
         id='canvas'
-        width='1000'
-        height='800'
+        width={(size+10)*2+""}
+        height={(size+10)*2+""}
         style={{
           pointerEvents: isFinished && isOnlyOnce ? 'none' : 'auto'
         }}
