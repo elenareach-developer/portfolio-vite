@@ -19,6 +19,9 @@ export interface WheelProps{
   fontFamily?:string 
 }
 
+export interface TimerProps{
+  timer:number
+}
 const defaultWeelProps = {
   primaryColor: 'black',
   contrastColor: 'white',

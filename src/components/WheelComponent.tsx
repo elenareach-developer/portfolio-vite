@@ -9,12 +9,17 @@ import { WheelProps } from '../config/projects'
              width='400'
         height='400'
   */
+
+        /*
+        решение  -  сначала рендомли выбрать попоюителя потом мосчитать угол поворотов  и количество оборотов
+        возращать имя только после положенного интервалва времени
+         */
 const WheelComponent = ({
   segments,
   segColors,
   winningSegment,
   onFinished,
-  primaryColor = 'black',
+  primaryColor = '#4338ca',
   contrastColor = 'white',
   buttonText = 'Spin',
   isOnlyOnce = true,
@@ -76,7 +81,6 @@ const WheelComponent = ({
 
   const initCanvas = () => {
     let canvas = document.getElementById('canvas')
-    console.log(navigator)
     if (navigator.userAgent.indexOf('MSIE') !== -1) {
       canvas = document.createElement('canvas')
       canvas.setAttribute('width', (size+10)*2+"")
@@ -91,8 +95,8 @@ const WheelComponent = ({
     isStarted = true
     if (timerHandle === 0) {
       spinStart = new Date().getTime()
-      // maxSpeed = Math.PI / ((segments.length*2) + Math.random())
-      maxSpeed = Math.PI / segments.length
+       maxSpeed = Math.PI * Math.random()*3600/segments.length*2
+      //maxSpeed = Math.PI / segments.length
       frames = 0
       timerHandle = setInterval(onTimerTick, timerDelay)
     }
@@ -104,7 +108,7 @@ const WheelComponent = ({
     let progress = 0
     let finished = false
     if (duration < upTime) {
-      progress = duration / upTime
+      progress = (duration) / upTime
       angleDelta = maxSpeed * Math.sin((progress * Math.PI) / 2)
     } else {
       if (winningSegment) {
@@ -208,7 +212,7 @@ const WheelComponent = ({
     ctx.strokeStyle = primaryColor
     ctx.stroke()
   }
-
+//пересчитать задачу- угола + скорость получить результат 
   const drawNeedle = () => {
     const ctx = canvasContext
     ctx.lineWidth = 1

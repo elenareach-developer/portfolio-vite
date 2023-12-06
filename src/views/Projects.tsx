@@ -1,4 +1,4 @@
-import { BeakerIcon } from '@heroicons/react/outline'
+import { SparklesIcon } from '@heroicons/react/outline'
 import React from 'react'
 import Company from '../components/Company'
 import {  projectsLena } from '../config/projects'
@@ -11,7 +11,7 @@ const Projects = () => {
   return (
     <div className="bg-slate-400  min-h-screen lg:pl-2">
       <div className="text-2xl font-bold flex items-center">
-        <BeakerIcon className="mr-4 w-6 h-6" />
+        <SparklesIcon className="mr-4 w-6 h-6" />
         <div>Projects</div>
       </div>
 

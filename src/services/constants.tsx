@@ -20,34 +20,26 @@ export const skills = [
 ]
 
 export const segmentsWheel = [
-  '11111',
-  'won 70',
-  'won 10',
-  'better luck next time',
-  'better luck next time',
-  'won 70',
-  'won 10',
-  'better luck next time',
-  'better luck next time',
-  'won 70',
-  'won 10',
-  'better luck next time',
-  'better luck next time',
-  'won 70',
-  'won 10',
-  'better luck next time',
-  '55555',
+'Angular',
+'React',
+'Redux',
+'Tailwindcss',
+'Python',
+'Express.js',
+'NodeJS',
+'MongoDb',
+'PostgreSQL'
  
 ]
 export const segColorsWheel = [
-  '#EE4040',
-  '#F0CF50',
-  '#815CD1',
-  '#3DA5E0',
-  '#34A24F',
-  '#F9AA1F',
-  '#EC3F3F',
-  '#FF9000'
+  'rgb(254 202 202)',
+  'rgb(253 164 175)',
+  'rgb(240 171 252)',
+  'rgb(217 249 157)',
+  'rgb(165 243 252)',
+  'rgb(125 211 252)',
+  'rgb(165 180 252)',
+  'rgb(216 180 254)'
 ]
 export const onFinishedWheel = (winner:string)=> {
   console.log(winner)
