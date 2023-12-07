@@ -1,8 +1,8 @@
-import bithesis from '../assets/bithesis.png'
-import dowww from '../assets/dowww.png'
-import onedriveVercelIndex from '../assets/onedrive-vercel-index.png'
-import substats from '../assets/substats.png'
-import vscodeMathToImage from '../assets/vscode-math-to-image.png'
+import bithesis from '/assets/bithesis.png'
+import dowww from '/assets/dowww.png'
+import onedriveVercelIndex from '/assets/onedrive-vercel-index.png'
+import substats from '/assets/substats.png'
+import vscodeMathToImage from '/assets/vscode-math-to-image.png'
 
 export interface WheelProps{
   segments:string[],
@@ -93,11 +93,11 @@ const global  = "The 27Global a huge consult on it company/. At this company I h
 const apolloware = " One of the 27Global the project that I worked on was the Appolloware project where I used Angular8, NodeJS and AWS stack components to create a way to view the amount electricity various devices expend during the day. The data was real-time and updated the user live on the amount of electricity they expended over the course of a day. "
 const geeni = "Another of the 27Global huge project I worked on was the GEENI app which was built on ReactNative, NodeJS, and AVS. It provides a way to manipulate smart home devices from different manufactures. My job in this project was to create certain scenes and connect various devices to the application for an easier and more uniform user experience."
 export const projectsLena  = [
-  {img:"/src/assets/charter-logo.png", description: charter,skills:["AgularJS", "Pyhon", "MongoDB"], title:"Full Stack Engineer"},
-  {img:"/src/assets/ahs-logo.svg", description: ahs, skills:["React.js","NodeJs","MongoDb"] ,title:"Software Engineer"},
-  {img:"/src/assets/codepath-logo.webp", description: codepath, skills:["React", "NodeJS","Postgres"],title:"Full-Stack Software Engineer | Instructor"},
-  {img:"/src/assets/dish-logo.png", description: dish,skills:["React.js","Python","MySQl"] ,title:"Software Engineer"},
-  {img:"/src/assets/27Global-logo.png", description:global ,skills:["React.js", " React Native"," AngularJS ","Angular Material", "NodeJs"] ,title:"Software Engineer"},
-  {img:"/src/assets/geeni_logo_27Global.avif", description:geeni ,skills:[" React Native"," NodeJs "] ,title:"Software Engineer"},
-  {img:"/src/assets/apolloware_logo_27Global.png", description:apolloware,skills:[" Angular8 ","Angular Material", "D3.js"] ,title:"Software Engineer"}
+  {img:"/assets/charter-logo.png", description: charter,skills:["AgularJS", "Pyhon", "MongoDB"], title:"Full Stack Engineer"},
+  {img:"/assets/ahs-logo.svg", description: ahs, skills:["React.js","NodeJs","MongoDb"] ,title:"Software Engineer"},
+  {img:"/assets/codepath-logo.webp", description: codepath, skills:["React", "NodeJS","Postgres"],title:"Full-Stack Software Engineer | Instructor"},
+  {img:"/assets/dish-logo.png", description: dish,skills:["React.js","Python","MySQl"] ,title:"Software Engineer"},
+  {img:"/assets/27Global-logo.png", description:global ,skills:["React.js", " React Native"," AngularJS ","Angular Material", "NodeJs"] ,title:"Software Engineer"},
+  {img:"/assets/geeni_logo_27Global.avif", description:geeni ,skills:[" React Native"," NodeJs "] ,title:"Software Engineer"},
+  {img:"/assets/apolloware_logo_27Global.png", description:apolloware,skills:[" Angular8 ","Angular Material", "D3.js"] ,title:"Software Engineer"}
 ]

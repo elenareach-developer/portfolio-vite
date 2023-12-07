@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import cat from '../assets/cat.png'
+import cat from '/assets/cat.png'
 
 const getRandomQuote = (): string => {
   const quotes: string[] = [

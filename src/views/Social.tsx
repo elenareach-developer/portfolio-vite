@@ -3,8 +3,8 @@ import React from 'react'
 import SocialCard from '../components/SocialCard'
 import { socials } from '../config/socials'
 
-import teyvatBackground from '../assets/teyvat-screenshot.png'
-import genshinBackground from '../assets/genshin-screenshot.png'
+import teyvatBackground from '/assets/teyvat-screenshot.png'
+import genshinBackground from '/assets/genshin-screenshot.png'
 
 const socialCards = socials.map(s => (
   <SocialCard key={s.name} name={s.name} link={s.link} icon={s.icon} apiUrl={s.apiUrl} color={s.color} />

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import wave from '../assets/wave.png'
+import wave from '/assets/wave.png'
 import { ServerIcon } from '@heroicons/react/outline'
 
 

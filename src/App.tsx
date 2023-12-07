@@ -8,7 +8,7 @@ import Wheel from './views/Wheel'
 import Home from './views/Home'
 import NotFound from './views/NotFound'
 import Projects from './views/Projects'
-import avatar from './assets/avatar.png'
+import avatar from '/assets/avatar.png'
 
 const menu = [
   {path: "/", title:"Home", component:<Home/>},
@@ -45,8 +45,8 @@ const App = () => {
 
   return (
     <Router>
-      <div className="min-h-screen flex flex-col dark:bg-gray-900 dark:text-white ">
-        <div className="container mx-auto px-6 flex-grow">
+      <div className="min-h-screen flex flex-col justify-center dark:bg-gray-900 dark:text-white ">
+        <div className="container max-w-600 mx-auto px-6">
           <nav className="mt-4 flex flex-row justify-between ">
             <Link
               className="flex lg:p-2 py-2 rounded items-center lg:hover:bg-gray-100 lg:dark:hover:bg-gray-800"
